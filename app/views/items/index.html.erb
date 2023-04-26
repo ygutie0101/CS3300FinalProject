@@ -13,6 +13,7 @@
 
   <tbody>
     <% @items.each do |item| %>
+      <% if user_signed_in? %>
       <tr>
         <td><%= item.title %></td>
         <td><%= item.description %></td>
