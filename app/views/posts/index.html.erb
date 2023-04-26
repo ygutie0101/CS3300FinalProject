@@ -13,6 +13,7 @@
 
   <tbody>
     <% @posts.each do |post| %>
+      <% if user_signed_in? %>
       <tr>
         <td><%= post.title %></td>
         <td><%= post.description %></td>
