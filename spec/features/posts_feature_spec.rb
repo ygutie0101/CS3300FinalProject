@@ -64,31 +64,33 @@ RSpec.feature "Posts", type: :feature do
         end
 
 
-    scenario "should be successful" do
-        within("form") do
+        scenario "should be successful" do
+            within("form") do
             fill_in "Description", with: "New description content"
+            end
+            click_button "Update Post"
+            expect(page).to have_content("Post was successfully updated")
         end
-        click_button "Update Post"
-        expect(page).to have_content("Project was successfully updated")
+
+
+        scenario "should fail" do
+            within("form") do
+                fill_in "Description", with: ""
+            end
+            click_button "Update Post"
+            expect(page).to have_content("Description can't be blank")
+        end
+
+
+        scenario "should fail" do
+            within("form") do
+                fill_in "Title", with: ""
+            end
+            click_button "Update Post"
+            expect(page).to have_content("Title can't be blank")
+        end
     end
 
-
-    scenario "should fail" do
-        within("form") do
-            fill_in "Description", with: ""
-        end
-        click_button "Update Post"
-        expect(page).to have_content("Description can't be blank")
-    end
-
-
-    scenario "should fail" do
-        within("form") do
-            fill_in "Title", with: ""
-        end
-        click_button "Update Post"
-        expect(page).to have_content("Title can't be blank")
-    end
 end
 
 # context "Delete project" do
@@ -106,5 +108,5 @@ end
 #       expect(page).to have_content("Project was successfully destroyed.")
  #    end
 
-end
+
 

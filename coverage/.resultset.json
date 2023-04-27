@@ -8,7 +8,7 @@
           1,
           null,
           1,
-          2,
+          3,
           null,
           null,
           null,
@@ -83,6 +83,7 @@
       },
       "/root/CS3300FinalProject/app/models/post.rb": {
         "lines": [
+          1,
           1,
           1,
           null
@@ -261,6 +262,6 @@
         }
       }
     },
-    "timestamp": 1682561214
+    "timestamp": 1682617822
   }
 }
