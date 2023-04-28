@@ -93,20 +93,21 @@ RSpec.feature "Posts", type: :feature do
 
 end
 
-# context "Delete project" do
- #    let(:project) { Project.create(title: "Test title", description: "Test content") }
- #    before(:each) do
- #      user = FactoryBot.create(:user)
- #      login_as(user)
- #      visit root_path
- #    end
+    #context "Delete post" do
+       #let(:post) { Post.create(title: "Test title", description: "Test content") }
+            #before(:each) do
+            #user = FactoryBot.create(:user)
+            #login_as(user)
+            #visit root_path
+        #end
 
-
-#     scenario "should be successful" do
-#       click_button "Destroy"
-#       click_button "Ok"
-#       expect(page).to have_content("Project was successfully destroyed.")
- #    end
+        #scenario "should be successful" do
+            #click_button "Destroy"
+            #click_button "Ok"
+            #expect(page).to have_content("Post was successfully destroyed.")
+        #end
+    #end
+#end
 
 
 
