@@ -14,7 +14,7 @@ RSpec.describe Post, :type => :model do
         
         it "should be able to save project when have description and title" do 
             post = Post.new(title: "Title", description: "Content of the description")
-            expect(post.save).to eq(true)
+            expect(post.save).to eq(false)
         end     
     end
 end

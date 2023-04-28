@@ -1,14 +1,18 @@
+<div class= "col-xl-5 col-md-6 col-sm-8 col-10" style="margin: auto; background-color: #F3F9E0; 
+border-radius: 6px; padding: 15px;">
 <p id="notice"><%= notice %></p>
 
-<p>
+<p class="text-center">
   <strong>Title:</strong>
-  <%= @post.title %>
+  <%= @post.title%>
 </p>
 
-<p>
+<p class="text-center">
   <strong>Description:</strong>
   <%= @post.description %>
 </p>
 
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+<%= link_to 'Edit', edit_post_path(@post), class: "btn btn-primary" %> |
+<%= link_to 'Back', posts_path, class: "btn btn-primary" %>
+
+</div>
